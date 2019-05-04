@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[testHexo]]></title>
+    <url>%2F2019%2F05%2F04%2FtestHexo%2F</url>
+    <content type="text"><![CDATA[this is a test!!!]]></content>
+      <categories>
+        <category>study</category>
+        <category>memory</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[gitCheetSheet]]></title>
+    <url>%2F2019%2F05%2F04%2FgitCheetSheet%2F</url>
+    <content type="text"><![CDATA[git常用命令git config user.name –查看用户名 git config user.email –查看用户邮箱 git config --global user.name –设置用户名 git config --global user.email –设置用户邮箱 git add filename/pathname/. –添加文件/文件夹/全部文件 git commit -m &#39;file describle&#39; –提交文件 git log –查询提交历史 .gitgnorey文件 –排除在版本控制之外可使用*通配符 git status –查看当前文件提交状态 git diff file–对比上一次提交与现在的改变 git reset HEAD filename/pathname/. –撤销提交 git checkout file–撤销修改在没有提交的前提下 git branch–查看分支 git branch name–创建分支 git checkout name–切换到分支name git branch -D name–删除分支name git push origin master–本地仓库同步到远程仓库origin的master分支 git fetch origin master–远程仓库同步到本地仓库存放在origin/master分支上 git merge origin/master–合并到本地当前分支 git pull origin/master–同步远程仓库并同步]]></content>
+      <categories>
+        <category>memory</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F05%2F04%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>
