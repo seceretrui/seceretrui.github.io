@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[我的软件清单]]></title>
+    <url>%2F2019%2F05%2F13%2F%E6%88%91%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95%2F</url>
+    <content type="text"><![CDATA[日常使用随着电脑用的时间越来越久，软件也装的越来越多，看见好玩的，都会下载下来，虽然不久就遗忘了或卸载了，但随着电脑重装次数的变多，装这些软件都够费时间的，所以整理一下。 通讯类: qq, telegram, gitter，微信 文字类 wps， typora, office, smartPdf 知识管理类 Mindmaster, 印象笔记 编程类 vscode, pycharm，git，JupyterNotebook, Android Studio 影音娱乐类 网易云音乐, mpv, spotify, steam, wegame， 暴雪战网 网络类 Chrome, firefox, ssr 工具类 everything, utools, 护眼宝, RaiDrive, TeamViewer, pybingwp, 欧路词典 云盘类 百度云, onedriver, mega,]]></content>
+      <categories>
+        <category>备份</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[testHexo]]></title>
     <url>%2F2019%2F05%2F04%2FtestHexo%2F</url>
     <content type="text"><![CDATA[this is a test!!!]]></content>
