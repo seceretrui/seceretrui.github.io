@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[python正则备忘]]></title>
     <url>%2F2019%2F05%2F27%2Fpython%E6%AD%A3%E5%88%99%E5%A4%87%E5%BF%98%2F</url>
-    <content type="text"><![CDATA[python正则备忘python正则常用方法python通过re模块实现了完整的正则表达示，通过import re引入 参数pattern –匹配模式string –原字符串flags –可选标志 查找字符串re.match(pattern, string, flags=0)仅匹配开头，成功返回re.Match object,失败则返回None re.search(pattern, string, flags=0)匹配整个字符串仅一次只要成功就不再匹配后面，成功返回re.Match object,若失败则返回None pattern.findall(string[, pos[, endpos]])匹配整个字符串所有符合匹配模式的字符串，返回re.Match object,失败返回None re.finditer(pattern, string, flags=0)匹配整个字符串，返回可迭代对像，匹配成功可迭代re.Match object, 匹配失败为None 替换字符串re.sub(patttern, repl, string, count=0, flags=0)将模式匹配字符串替换为repl中的字符串 re.split(pattern, string[, maxsplit=0, flags=0])将字符串按模式匹配分割 正则表达示对像re.Match objectobject.span() 返回匹配的索引元组object.group() 返回匹配的字符串object.start() 返回开始索引object.end() 返回结束索引 re.compile生成pattern对像，用以描述要匹配的字符串 ##]]></content>
+    <content type="text"><![CDATA[python正则备忘python正则常用方法python通过re模块实现了完整的正则表达示，通过import re引入 参数pattern –匹配模式string –原字符串flags –可选标志 查找字符串re.match(pattern, string, flags=0)仅匹配开头，成功返回re.Match object,失败则返回None re.search(pattern, string, flags=0)匹配整个字符串仅一次只要成功就不再匹配后面，成功返回re.Match object,若失败则返回None pattern.findall(string[, pos[, endpos]])匹配整个字符串所有符合匹配模式的字符串，返回re.Match object,失败返回None re.finditer(pattern, string, flags=0)匹配整个字符串，返回可迭代对像，匹配成功可迭代re.Match object, 匹配失败为None 替换字符串re.sub(patttern, repl, string, count=0, flags=0)将模式匹配字符串替换为repl中的字符串 re.split(pattern, string[, maxsplit=0, flags=0])将字符串按模式匹配分割 正则表达示对像re.Match objectobject.span() 返回匹配的索引元组object.group() 返回匹配的字符串object.start() 返回开始索引object.end() 返回结束索引 re.compile生成pattern对像，用以描述要匹配的字符串]]></content>
       <categories>
         <category>python</category>
       </categories>
