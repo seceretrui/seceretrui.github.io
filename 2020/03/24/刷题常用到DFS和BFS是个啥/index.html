@@ -97,18 +97,21 @@
 
 <script src="https://neveryu.github.io/js/src/pace.min.js"></script>
 
-  <meta name="description" content="spring源码分析 spring的循环依赖 spring bean的生命周期 spring bean实例化  依赖注入功能的实现 初始化bean">
-<meta name="keywords" content="源码分析">
+  <meta name="description" content="刷题常用的DFS和BFS是个啥 ？先来看一道题吧题号【Leetcode】200. Number of Islands题目如下所示 Given a 2d grid map of &amp;#39;1&amp;#39;s (land) and &amp;#39;0&amp;#39;s (water), count the number of islands. An island is surrounded by water and">
+<meta name="keywords" content="BFS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="spring源码分析">
-<meta property="og:url" content="http://yoursite.com/2020/03/19/spring源码分析/index.html">
+<meta property="og:title" content="刷题常用到DFS和BFS是个啥?">
+<meta property="og:url" content="http://yoursite.com/2020/03/24/刷题常用到DFS和BFS是个啥/index.html">
 <meta property="og:site_name" content="seceretrui&#39;s blog">
-<meta property="og:description" content="spring源码分析 spring的循环依赖 spring bean的生命周期 spring bean实例化  依赖注入功能的实现 初始化bean">
+<meta property="og:description" content="刷题常用的DFS和BFS是个啥 ？先来看一道题吧题号【Leetcode】200. Number of Islands题目如下所示 Given a 2d grid map of &amp;#39;1&amp;#39;s (land) and &amp;#39;0&amp;#39;s (water), count the number of islands. An island is surrounded by water and">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-03-19T13:58:13.410Z">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:updated_time" content="2020-03-24T12:27:47.401Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="spring源码分析">
-<meta name="twitter:description" content="spring源码分析 spring的循环依赖 spring bean的生命周期 spring bean实例化  依赖注入功能的实现 初始化bean">
+<meta name="twitter:title" content="刷题常用到DFS和BFS是个啥?">
+<meta name="twitter:description" content="刷题常用的DFS和BFS是个啥 ？先来看一道题吧题号【Leetcode】200. Number of Islands题目如下所示 Given a 2d grid map of &amp;#39;1&amp;#39;s (land) and &amp;#39;0&amp;#39;s (water), count the number of islands. An island is surrounded by water and">
+<meta name="twitter:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
 
 
 
@@ -116,7 +119,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2020/03/19/spring源码分析/">
+  <link rel="canonical" href="http://yoursite.com/2020/03/24/刷题常用到DFS和BFS是个啥/">
 
 
 
@@ -126,7 +129,7 @@
   };
 </script>
 
-  <title>spring源码分析 | seceretrui's blog</title>
+  <title>刷题常用到DFS和BFS是个啥? | seceretrui's blog</title>
   
 
 
@@ -354,7 +357,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/19/spring源码分析/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/24/刷题常用到DFS和BFS是个啥/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="seceretrui">
@@ -371,7 +374,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">spring源码分析
+          <h1 class="post-title" itemprop="name headline">刷题常用到DFS和BFS是个啥?
 
               
             
@@ -397,7 +400,7 @@
                 
               
 
-              <time title="Created: 2020-03-19 09:50:00 / Modified: 21:58:13" itemprop="dateCreated datePublished" datetime="2020-03-19T09:50:00+08:00">2020-03-19</time>
+              <time title="Created: 2020-03-24 20:19:28 / Modified: 20:27:47" itemprop="dateCreated datePublished" datetime="2020-03-24T20:19:28+08:00">2020-03-24</time>
             
 
             
@@ -419,7 +422,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/spring-java/" itemprop="url" rel="index"><span itemprop="name">spring java</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/算法/" itemprop="url" rel="index"><span itemprop="name">算法</span></a></span>
 
                 
                 
@@ -454,14 +457,30 @@
       
 
       
-        <h1 id="spring源码分析"><a href="#spring源码分析" class="headerlink" title="spring源码分析"></a>spring源码分析</h1><ul>
-<li>spring的循环依赖</li>
-<li>spring bean的生命周期</li>
-<li>spring bean实例化</li>
+        <h1 id="刷题常用的DFS和BFS是个啥-？"><a href="#刷题常用的DFS和BFS是个啥-？" class="headerlink" title="刷题常用的DFS和BFS是个啥 ？"></a>刷题常用的DFS和BFS是个啥 ？</h1><h2 id="先来看一道题吧"><a href="#先来看一道题吧" class="headerlink" title="先来看一道题吧"></a>先来看一道题吧</h2><p>题号【Leetcode】200. Number of Islands题目如下所示</p>
+<p>Given a 2d grid map of <code>&#39;1&#39;</code>s (land) and <code>&#39;0&#39;</code>s (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Input:</span><br><span class="line">11110</span><br><span class="line">11010</span><br><span class="line">11000</span><br><span class="line">00000</span><br><span class="line"></span><br><span class="line">Output: 1</span><br></pre></td></tr></table></figure>
+<p><strong>Example 2:</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Input:</span><br><span class="line">11000</span><br><span class="line">11000</span><br><span class="line">00100</span><br><span class="line">00011</span><br><span class="line"></span><br><span class="line">Output: 3</span><br></pre></td></tr></table></figure>
+<p>经常刷题的朋友肯定做过，大概意思就是一个字符数组中连成一片的’1‘有多少个，连成一片的算一个。</p>
+<p>看到这道题首先想到的就是模拟移动，我们随意选一个点，首先判断这个点是不是’1’，然后开始上下左右的移动，假设点坐标为（i，j)向上（i, j-1)向下（i+1,j)向左（i, j-1), 向右（i, j+1)，但是不能越界，不能超出了数组的边界，我们把移动过的点改为’0’，将其标记为走过，不断深入直到周围全是’0’了就停止了，这样我们就完成了一次统计。接下来就很简单了，只要重复上面的方式将整个数组遍历完就可以得到结果。Java代码如下所示：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">numIslands</span><span class="params">(<span class="keyword">char</span>[][] grid)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (grid == <span class="keyword">null</span> || grid.length==<span class="number">0</span> || grid[<span class="number">0</span>].length==<span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> row = grid.length;</span><br><span class="line">        <span class="keyword">int</span> col = grid[<span class="number">0</span>].length;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;row; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;col; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (grid[i][j] == <span class="string">'1'</span>) &#123;</span><br><span class="line">                    res++;</span><br><span class="line">                    backTrack(grid, i, j, row, col);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">backTrack</span><span class="params">(<span class="keyword">char</span>[][] grid, <span class="keyword">int</span> i, <span class="keyword">int</span> j, <span class="keyword">int</span> row, <span class="keyword">int</span> col)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (i &lt; row &amp;&amp; j &lt; col &amp;&amp; i&gt;=<span class="number">0</span> &amp;&amp; j&gt;=<span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (grid[i][j] == <span class="string">'1'</span>) &#123;</span><br><span class="line">                grid[i][j] = <span class="string">'0'</span>;</span><br><span class="line">                backTrack(grid, i, j+<span class="number">1</span>, row, col);</span><br><span class="line">                backTrack(grid, i+<span class="number">1</span>, j, row, col);</span><br><span class="line">                backTrack(grid, i, j-<span class="number">1</span>, row, col);</span><br><span class="line">                backTrack(grid, i-<span class="number">1</span>, j, row, col);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="DFS-Depth-First-Search"><a href="#DFS-Depth-First-Search" class="headerlink" title="DFS(Depth First Search)"></a>DFS(Depth First Search)</h3><p>事实上，深度优先搜索属于图算法的一种，英文缩写为DFS即Depth First Search.其过程简要来说是对每一个可能的分支路径深入到不能再深入为止，而且每个<a href="https://baike.baidu.com/item/节点" target="_blank" rel="noopener">节点</a>只能访问一次.，其实上面所做的就是一次dfs,是不是有了点感觉了。实现dfs的过程一般伴随着回溯，一般使用递归来实现，也可以用栈来替代递归。</p>
+<h2 id="BFS-Breadth-first-search"><a href="#BFS-Breadth-first-search" class="headerlink" title="BFS(Breadth-first search)"></a>BFS(Breadth-first search)</h2><p>我们下面用BFS的方式再来做一遍,于DFS思路的区别是我们对这个点四周不断扩散，而不是向它的某一边一直深入再深入另一边，我们可以使用一个队列来存储当前的点，将当前为‘1’的点加入队列，取出来判断四周，然后将周围为’1’的点加入队列，重复这个过程，为了避免将判断过的点重复加入队列，可以使用一个boolean数组来记录那些点已经判断过了。代码如下所示：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">numIslands</span><span class="params">(<span class="keyword">char</span>[][] grid)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (grid == <span class="keyword">null</span> || grid.length==<span class="number">0</span> || grid[<span class="number">0</span>].length==<span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> row = grid.length;</span><br><span class="line">        <span class="keyword">int</span> col = grid[<span class="number">0</span>].length;</span><br><span class="line">        <span class="keyword">boolean</span>[][] visited = <span class="keyword">new</span> <span class="keyword">boolean</span>[row][col];</span><br><span class="line">        Queue&lt;<span class="keyword">int</span>[]&gt; queue = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;row; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;col; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (grid[i][j] == <span class="string">'1'</span> &amp; !visited[i][j]) &#123;</span><br><span class="line">                    res++;</span><br><span class="line">                    queue.offer(<span class="keyword">new</span> <span class="keyword">int</span>[] &#123;i, j&#125;);</span><br><span class="line">                    visited[i][j] = <span class="keyword">true</span>;</span><br><span class="line">                    bfs(grid, queue, visited);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span>[][] nums = &#123;&#123;<span class="number">0</span>, <span class="number">1</span>&#125;, &#123;<span class="number">1</span>, <span class="number">0</span>&#125;, &#123;-<span class="number">1</span>, <span class="number">0</span>&#125;, &#123;<span class="number">0</span>, -<span class="number">1</span>&#125;&#125;; </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">bfs</span><span class="params">(<span class="keyword">char</span>[][] grid, Queue&lt;<span class="keyword">int</span>[]&gt; queue, <span class="keyword">boolean</span>[][] visited)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> row = grid.length;</span><br><span class="line">        <span class="keyword">int</span> col = grid[<span class="number">0</span>].length;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> (!queue.isEmpty()) &#123;</span><br><span class="line">            <span class="keyword">int</span>[] cur = queue.poll();</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span>[] num : nums) &#123;</span><br><span class="line">                <span class="keyword">int</span> x = cur[<span class="number">0</span>] + num[<span class="number">0</span>];</span><br><span class="line">                <span class="keyword">int</span> y = cur[<span class="number">1</span>] + num[<span class="number">1</span>];</span><br><span class="line">                <span class="keyword">if</span> (x &lt; <span class="number">0</span> || x &gt;= row || y &lt; <span class="number">0</span> || y &gt;= col || visited[x][y]==<span class="keyword">true</span> || grid[x][y] == <span class="string">'0'</span>) <span class="keyword">continue</span>;</span><br><span class="line">                visited[x][y] = <span class="keyword">true</span>;</span><br><span class="line">                queue.offer(<span class="keyword">new</span> <span class="keyword">int</span>[] &#123;x, y&#125;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>就这到题来说BFS感觉有点复杂了，BFS，其英文全称是Breadth First Search。 BFS并不使用经验法则算法。从算法的观点，所有因为展开节点而得到的子节点都会被加进一个先进先出的<a href="https://baike.baidu.com/item/队列" target="_blank" rel="noopener">队列</a>中，这是百度百科的定义。bfs一般用队列实现，BFS在求解最短路径或者最短步数上有很多的应用。应用最多的是在走迷宫上。可以尝试解决一下下面的问题：</p>
+<p>在一个n<em>n的矩阵里走，从原点（0,0）开始走到终点（n-1,n-1），只能上下左右4个方向走，只能在给定的矩阵里走，求最短步数。n</em>n是01矩阵，0代表该格子没有障碍，为1表示有障碍物。</p>
+<h2 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h2><p>给出一些我做过的运用了BFS/DFS及回溯的习题，大家可以做一下:</p>
+<ul>
+<li><a href="https://leetcode.com/problems/same-tree/" target="_blank" rel="noopener">Leetcode[100]</a></li>
+<li><a href="https://leetcode.com/problems/symmetric-tree/" target="_blank" rel="noopener">Leetcode[101]</a></li>
+<li><a href="https://www.nowcoder.com/practice/6e5207314b5241fb83f2329e89fdecc8?tpId=13&amp;tqId=11219&amp;tPage=4&amp;rp=4&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking" target="_blank" rel="noopener">牛客网[机器人的运动范围]</a></li>
+<li><a href="https://www.nowcoder.com/practice/c61c6999eecb4b8f88a98f66b273a3cc?tpId=13&amp;tqId=11218&amp;tPage=4&amp;rp=4&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking" target="_blank" rel="noopener">牛客网[矩阵中的路径]</a></li>
 </ul>
-<h2 id="依赖注入功能的实现"><a href="#依赖注入功能的实现" class="headerlink" title="依赖注入功能的实现"></a>依赖注入功能的实现</h2><ol>
-<li>初始化bean</li>
-</ol>
+<p>希望大家给点意见啊，才开始刷题的萌新！！！谢谢给位大佬了╭(●｀∀´●)╯ </p>
 
       
     </div>
@@ -485,7 +504,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/源码分析/" rel="tag"># 源码分析</a>
+            <a href="/tags/BFS/" rel="tag"># BFS</a>
           
         </div>
       
@@ -498,8 +517,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/12/26/hexo相关操作/" rel="next" title="hexo相关操作">
-                <i class="fa fa-chevron-left"></i> hexo相关操作
+              <a href="/2020/03/19/spring源码分析/" rel="next" title="spring源码分析">
+                <i class="fa fa-chevron-left"></i> spring源码分析
               </a>
             
           </div>
@@ -507,10 +526,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/03/24/刷题常用到DFS和BFS是个啥/" rel="prev" title="刷题常用到DFS和BFS是个啥?">
-                刷题常用到DFS和BFS是个啥? <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -689,7 +704,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#spring源码分析"><span class="nav-number">1.</span> <span class="nav-text">spring源码分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#依赖注入功能的实现"><span class="nav-number">1.1.</span> <span class="nav-text">依赖注入功能的实现</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#刷题常用的DFS和BFS是个啥-？"><span class="nav-number">1.</span> <span class="nav-text">刷题常用的DFS和BFS是个啥 ？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#先来看一道题吧"><span class="nav-number">1.1.</span> <span class="nav-text">先来看一道题吧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DFS-Depth-First-Search"><span class="nav-number">1.1.1.</span> <span class="nav-text">DFS(Depth First Search)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BFS-Breadth-first-search"><span class="nav-number">1.2.</span> <span class="nav-text">BFS(Breadth-first search)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#习题"><span class="nav-number">1.3.</span> <span class="nav-text">习题</span></a></li></ol></li></ol></div>
             
 
           </div>
