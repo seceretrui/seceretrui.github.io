@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[spring源码分析]]></title>
+    <url>%2F2020%2F03%2F19%2Fspring%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%2F</url>
+    <content type="text"><![CDATA[spring源码分析 spring的循环依赖 spring bean的生命周期 spring bean实例化 依赖注入功能的实现 初始化bean]]></content>
+      <categories>
+        <category>spring java</category>
+      </categories>
+      <tags>
+        <tag>源码分析</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[hexo相关操作]]></title>
     <url>%2F2019%2F12%2F26%2Fhexo%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C%2F</url>
     <content type="text"><![CDATA[hexo 常用操作配置相关hexo s–启动服务在本地端口hexo g–生成静态页面hexo d–部署服务hexo d -g–部署并生成静态页面 写作相关hexo new [layout] &lt;title&gt;–创建一篇文章根据文章类型存放在不同路径 layout path post source/_posts page source draft source/_drafts 常用文章参数，就是文章最上面的一些键值对title：默认为文章创建的名字data: 默认为文章创建时的时间tags: 标签用于标识文章，可以有多个，title: [][]或categories: 分类用于分类文章，可以有多个， categories: [][] 主题相关hexo全局配置文件_config.yml主题配置文件themes\config.yml修改主题在layout文件夹下，采用的是swig模板语法，根据需要去改动]]></content>
